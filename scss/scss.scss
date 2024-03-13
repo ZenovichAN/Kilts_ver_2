@@ -1,0 +1,39 @@
+// пару переменных добавлю 
+$width_block_content: 1400px;
+
+.wrapper {
+    width: 1440px;
+    height: 3521px;
+    background: #DEDEDE;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.content {
+    width: width_block_content;
+    display: flex;
+    flex-direction: column;
+    flex: 0px 1px auto;
+
+    .header {
+        width: 1400px;
+        background: #ad8484;
+        height: 300px;
+        border: 2px solid black;
+    }
+
+    .main {
+        width: 1400px;
+        background: #c85151;
+        height: 300px;
+        border: 2px solid black;
+
+    }
+
+    .footer {
+        width: 1400px;
+        background: #390f0f;
+        height: 300px;
+        border: 2px solid black;
+    }
+}

@@ -1,0 +1,32 @@
+.wrapper {
+  width: 1440px;
+  height: 3521px;
+  background: #DEDEDE;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+.content {
+  width: width_block_content;
+  display: flex;
+  flex-direction: column;
+  flex: 0px 1px auto;
+}
+.content .header {
+  width: 1400px;
+  background: #ad8484;
+  height: 300px;
+  border: 2px solid black;
+}
+.content .main {
+  width: 1400px;
+  background: #c85151;
+  height: 300px;
+  border: 2px solid black;
+}
+.content .footer {
+  width: 1400px;
+  background: #390f0f;
+  height: 300px;
+  border: 2px solid black;
+}/*# sourceMappingURL=scss.css.map */

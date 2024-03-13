@@ -40,6 +40,7 @@
 .container .header__menu ul li a {
   color: #020202;
   text-decoration: none;
+  margin: 0px 1px 0px 0px;
 }
 
 .content {

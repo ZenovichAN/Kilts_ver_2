@@ -57,11 +57,12 @@ $width_block_content: 1400px;
     flex-direction: column;
     // flex: 0px 1px auto;
     align-items: center;
+    
 
     .header {
         width: 1400px;
         height: 166px;
-        background: #ad8484;
+        background: #ebcbcb;
         display: flex;
         border: 2px solid black;
     }
@@ -69,9 +70,10 @@ $width_block_content: 1400px;
     .main {
         width: 1400px;
         background: #c85151;
-        height: 300px;
+        
         border: 2px solid black;
-        flex: 0px 1px auto;
+        
+        flex: 1px 1px auto; //не сработало
     }
 
     .footer {
@@ -79,6 +81,6 @@ $width_block_content: 1400px;
         background: #390f0f;
         height: 300px;
         border: 2px solid black;
-
+        
     }
 }

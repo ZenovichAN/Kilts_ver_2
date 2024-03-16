@@ -40,11 +40,14 @@ $width_block_content: 1400px;
 
         .header__list {
             list-style-type: none; //убрал маркеры (точки) списка!!!)))
+           
         }
 
         ul li a {
             color: #020202;
             text-decoration: none; //убрал подчеркивание ссылки !
+            margin: 0px 1px 0px 0px ; // нихера не дает
+             
         }
     }
 

@@ -1,18 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
 
-// пару переменных добавлю 
-$width_block_content: 1400px;
+// // пару переменных добавлю 
+// $width_block_content: 1400px;
+
+// .wrapper {
+//     width: 1440px;
+//     height: 3521px;
+//     background: #DEDEDE;
+//     border: 2px solid black;
+//     margin: 0 auto;
+//     padding: 10px 0px 0px 0px; // пока не нашел решения обойти этот отступ
+// }
+
+
+// .title {
+//     color: var(--Almost-black, #020202);
+//     /* Logo */
+//     font-family: Space Grotesk;
+//     font-size: 98px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 85%;
+//     /* 83.3px */
+//     text-transform: uppercase;
+// }
+
+
+// .container {
+//     width: 102px;
+//     height: 120px;
+
+
+//     .header__menu {
+//         color: var(--Almost-black, #020202);
+//         font-family: Space Grotesk;
+//         font-size: 9px;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: normal;
+//         text-transform: uppercase;
+//         text-align: top;
+
+//         .header__list {
+//             list-style-type: none; //убрал маркеры (точки) списка!!!)))
+
+//         }
+
+//         ul li a {
+//             color: #020202;
+//             text-decoration: none; //убрал подчеркивание ссылки !
+//             margin: 0px 1px 0px 0px ; // нихера не дает
+
+//         }
+//     }
+
+// }
+
+
+// .content {
+//     width: width_block_content;
+//     display: flex;
+//     flex-direction: column;
+//     // flex: 0px 1px auto;
+//     align-items: center;
+
+
+//     .header {
+//         width: 1400px;
+//         height: 166px;
+//         background: #ebcbcb;
+//         display: flex;
+//         border: 2px solid black;
+//     }
+
+//     .main {
+//         width: 1400px;
+//         background: #c85151;
+
+//         border: 2px solid black;
+
+//         flex: 1px 1px auto; //не сработало
+//     }
+
+
+// }
+// .footer {
+//         width: 1400px;
+//         background: #390f0f;
+//         height: 300px;
+//         border: 2px solid black;
+
+// }
+@import "make null.scss";
 
 .wrapper {
+    min-height: 100%;
+    // overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
     width: 1440px;
-    height: 3521px;
-    background: #DEDEDE;
-    border: 2px solid black;
     margin: 0 auto;
-    padding: 10px 0px 0px 0px; // пока не нашел решения обойти этот отступ
+    flex: 1 1 auto;
+    font-family: Space Grotesk;
+    text-transform: uppercase;
+    background-color: #DEDEDE;
 }
 
 .title {
+    padding: 10px 20px 10px 20px;
+
+    }
+
+.container {
+    max-width: 1400px;
+  
+}
+
+.row {
+    display: flex;
+    // justify-content: space-between;
+
+}
+
+.title__title {
     color: var(--Almost-black, #020202);
     /* Logo */
     font-family: Space Grotesk;
@@ -22,68 +136,81 @@ $width_block_content: 1400px;
     line-height: 85%;
     /* 83.3px */
     text-transform: uppercase;
+   
+
+}
+
+.title__list {
+   
+    margin-left: 242px;
+
+}
+
+ul li a {
+    color: #020202;
+    font-size: 12px;
+
+
+}
+
+.title__list2 {
+  
+    font-size: 12px;
+    margin-left: 131px;
+
+}
+
+.summa {
+  
+    font-size: 12px;
+    margin-left: 123px;
+
+    a {
+        color: #020202;
+        font-size: 12px;
+    }
+}
+
+.expertsindress {
+    
 }
 
 .container {
-    width: 102px;
-    height: 120px;
-
-    .header__menu {
-        color: var(--Almost-black, #020202);
-        font-family: Space Grotesk;
-        font-size: 9px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
-        text-align: top;
-
-        .header__list {
-            list-style-type: none; //убрал маркеры (точки) списка!!!)))
-           
-        }
-
-        ul li a {
-            color: #020202;
-            text-decoration: none; //убрал подчеркивание ссылки !
-            margin: 0px 1px 0px 0px ; // нихера не дает
-             
-        }
-    }
-
+    width: 1400px;
+    margin: 0 auto;
+   
+   
 }
 
+.expertsindress__row {
+     border: 1px solid #6F6F6F;
+    // padding: 10px 11px 10px 11px;
+     display: flex;
 
-.content {
-    width: width_block_content;
-    display: flex;
-    flex-direction: column;
-    // flex: 0px 1px auto;
-    align-items: center;
+    }
+.img {
+width: 912px;
+    height: 600px;
+    // border-right: 1px solid #6F6F6F;
+    // padding: 10px 11px 10px 11px;
+}
+.img__img {
+    width: 932px;
+    height: 620px;
     
+}
 
-    .header {
-        width: 1400px;
-        height: 166px;
-        background: #ebcbcb;
-        display: flex;
-        border: 2px solid black;
-    }
-
-    .main {
-        width: 1400px;
-        background: #c85151;
-        
-        border: 2px solid black;
-        
-        flex: 1px 1px auto; //не сработало
-    }
-
-    .footer {
-        width: 1400px;
-        background: #390f0f;
-        height: 300px;
-        border: 2px solid black;
-        
+.expertsindress__title {
+    font-size: 48px;
+    width: 465px;
+    height: 310px;
+    border: 1px solid #6F6F6F;
+    p {
+        font-size: 16px;
+        text-transform: none;
     }
 }
+
+.dekoration {}
+
+.footer {}

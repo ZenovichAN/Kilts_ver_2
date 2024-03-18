@@ -1,97 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
-
-// // пару переменных добавлю 
-// $width_block_content: 1400px;
-
-// .wrapper {
-//     width: 1440px;
-//     height: 3521px;
-//     background: #DEDEDE;
-//     border: 2px solid black;
-//     margin: 0 auto;
-//     padding: 10px 0px 0px 0px; // пока не нашел решения обойти этот отступ
-// }
-
-
-// .title {
-//     color: var(--Almost-black, #020202);
-//     /* Logo */
-//     font-family: Space Grotesk;
-//     font-size: 98px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 85%;
-//     /* 83.3px */
-//     text-transform: uppercase;
-// }
-
-
-// .container {
-//     width: 102px;
-//     height: 120px;
-
-
-//     .header__menu {
-//         color: var(--Almost-black, #020202);
-//         font-family: Space Grotesk;
-//         font-size: 9px;
-//         font-style: normal;
-//         font-weight: 400;
-//         line-height: normal;
-//         text-transform: uppercase;
-//         text-align: top;
-
-//         .header__list {
-//             list-style-type: none; //убрал маркеры (точки) списка!!!)))
-
-//         }
-
-//         ul li a {
-//             color: #020202;
-//             text-decoration: none; //убрал подчеркивание ссылки !
-//             margin: 0px 1px 0px 0px ; // нихера не дает
-
-//         }
-//     }
-
-// }
-
-
-// .content {
-//     width: width_block_content;
-//     display: flex;
-//     flex-direction: column;
-//     // flex: 0px 1px auto;
-//     align-items: center;
-
-
-//     .header {
-//         width: 1400px;
-//         height: 166px;
-//         background: #ebcbcb;
-//         display: flex;
-//         border: 2px solid black;
-//     }
-
-//     .main {
-//         width: 1400px;
-//         background: #c85151;
-
-//         border: 2px solid black;
-
-//         flex: 1px 1px auto; //не сработало
-//     }
-
-
-// }
-// .footer {
-//         width: 1400px;
-//         background: #390f0f;
-//         height: 300px;
-//         border: 2px solid black;
-
-// }
 @import "make null.scss";
+
+$width1400: 1400px;
 
 .wrapper {
     min-height: 100%;
@@ -108,6 +18,7 @@
     font-family: Space Grotesk;
     text-transform: uppercase;
     background-color: #DEDEDE;
+    flex: 1 1 auto; // должно помочь с прибивание футера
 }
 
 .title {
@@ -116,7 +27,7 @@
     }
 
 .container {
-    max-width: 1400px;
+    max-width: $width1400;
   
 }
 
@@ -171,12 +82,16 @@ ul li a {
     }
 }
 
+
+ // here starts second block EXPERTS IN HIGHLAND DRESS
+
+
 .expertsindress {
     
 }
 
 .container {
-    width: 1400px;
+    width: $width1400;
     margin: 0 auto;
    
    
@@ -189,28 +104,140 @@ ul li a {
 
     }
 .img {
-width: 912px;
-    height: 600px;
-    // border-right: 1px solid #6F6F6F;
+width: 932px;
+    height: 620px;
+    border-right: 1px solid #6F6F6F;
     // padding: 10px 11px 10px 11px;
 }
 .img__img {
-    width: 932px;
-    height: 620px;
-    
+    width: 912px;
+    height: 600px;
+    // border: 1px solid #6F6F6F;
+    margin: 11px 10px 11px 10px;
+    background: url(../img/Rectangle\ 55.jpg);
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
 }
 
 .expertsindress__title {
     font-size: 48px;
-    width: 465px;
-    height: 310px;
-    border: 1px solid #6F6F6F;
-    p {
+    // width: 447px;
+    // height: 81px;
+    // border: 1px solid #6F6F6F;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    
+}
+.p {
         font-size: 16px;
         text-transform: none;
+        width: 440px;
     }
+.dekoration {
+    height: 310px;
+   width: 467px;
+     background: url(..//img/Line\ 10.png) 0 0 no-repeat, url(..//img/Line\ 3.png) no-repeat, url(..//img/Line\ 4.png) right no-repeat, url(..//img/Line\ 9.png) center no-repeat;
 }
 
-.dekoration {}
+// next block block_future for future desing
 
-.footer {}
+.block_future{
+    width: $width1400;
+    height: 120px;
+    margin-left: 20px;
+}
+
+.footer { }
+.container{
+    width: 1440px;
+    background-color: #DEDEDE;
+}
+.footerForm {
+    width: 1400px;
+    height: 103px;
+    margin: 0 auto;
+    background-color: #DEDEDE;
+  }
+  .footerForm .blockHi {
+    display: flex;
+    width: 1399px;
+    height: 52px;
+    border: 1px solid #6f6f6f;
+  }
+  .footerForm .blockHi .singUp {
+    width: 463px;
+    height: 52px;
+    padding: 16px 9px 10px 10px;
+    color: var(--Almost-black, #020202);
+    /* Headline 2 */
+    font-family: Space Grotesk;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 22px */
+    text-transform: uppercase;
+  }
+  .footerForm .blockHi .email {
+    width: 468px;
+    height: 51px;
+    border: 1px solid #6f6f6f;
+    border-top: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: var(--Almost-black, #020202);
+    font-family: Space Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    text-transform: uppercase;
+    background: #dedede;
+  }
+  .footerForm .blockHi .buttonSubscribe {
+    padding: 16px 180px 15px 179px;
+    width: 467px;
+    height: 51px;
+    flex-shrink: 0;
+    color: var(--Almost-black, #020202);
+    /* Headline 2 */
+    font-family: Space Grotesk;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 22px */
+    text-transform: uppercase;
+    opacity: 0.7;
+    background: var(--Grey, #6f6f6f);
+  }
+  .footerForm .blockLO {
+    display: flex;
+    width: 1400px;
+    height: 51px;
+  }
+  .footerForm .blockLO .nonBlock {
+    width: 464px;
+    height: 50px;
+  }
+  .footerForm .blockLO .resultInfo {
+    padding-top: 16px;
+    padding-left: 10px;
+    border: 1px solid #6f6f6f;
+    border-top: 0px;
+    width: 935px;
+    height: 50px;
+    color: var(--Almost-black, #020202);
+    /* Text 1 */
+    font-family: Space Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    opacity: 0.5;
+  }

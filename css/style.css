@@ -220,7 +220,8 @@ ul li a {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%; /* 22px */
+  line-height: 110%;
+  /* 22px */
   text-transform: uppercase;
 }
 
@@ -236,7 +237,8 @@ ul li a {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 19.2px */
+  line-height: 120%;
+  /* 19.2px */
   text-transform: uppercase;
   background: #dedede;
 }
@@ -252,7 +254,8 @@ ul li a {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%; /* 22px */
+  line-height: 110%;
+  /* 22px */
   text-transform: uppercase;
   opacity: 0.7;
   background: var(--Grey, #6f6f6f);
@@ -282,6 +285,108 @@ ul li a {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 19.2px */
+  line-height: 120%;
+  /* 19.2px */
   opacity: 0.5;
+}
+
+/*HIGHLAND WEAR*/
+.highlandwearblock_container {
+  width: 1400px;
+  height: 821px;
+  margin: 0 auto;
+  border: 1px solid #6F6F6F;
+}
+
+.highlandwearblock_title {
+  width: 1400px;
+  height: 81px;
+  font-size: 48px;
+  border-bottom: 1px solid #6F6F6F;
+  padding-left: 11px;
+  padding-top: 20px;
+  background: url(..//img/Union.png) 1305px 23px no-repeat;
+}
+
+.highlandwearblock_toprow {
+  display: flex;
+}
+
+.block {
+  width: 232px;
+  height: 356px;
+  border: 1px solid #6F6F6F;
+}
+
+.imgallforblock {
+  width: 213px;
+  height: 300px;
+  margin: 10px 9px 10px 9px;
+}
+
+.img1 {
+  background: url(..//img/Rectangle\ 58.png) center no-repeat;
+}
+
+.button_block {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 232px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+.button_block1 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.img4 {
+  background: url(..//img/Rectangle\ 58_2.png) center no-repeat;
+}
+
+.button_block4 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.img6 {
+  background: url(..//img/Rectangle\ 58_3.png) center no-repeat;
+}
+
+.button_block6 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.highlandwearblock_buttomrow {
+  display: flex;
+}
+
+.img8 {
+  background: url(..//img/Rectangle\ 58_8.png) center no-repeat;
+}
+
+.button_block8 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.img9 {
+  background: url(..//img/Rectangle\ 58_9.png) center no-repeat;
+}
+
+.button_block9 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 193px 13px no-repeat;
+}
+
+.img11 {
+  background: url(..//img/Rectangle\ 58_11.png) center no-repeat;
+}
+
+.button_block11 {
+  border-top: 1px solid #6F6F6F;
+  background: url(..//img/Arrow.png) 190px 13px no-repeat;
 }

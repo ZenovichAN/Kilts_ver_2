@@ -24,11 +24,11 @@ $width1400: 1400px;
 .title {
     padding: 10px 20px 10px 20px;
 
-    }
+}
 
 .container {
     max-width: $width1400;
-  
+
 }
 
 .row {
@@ -47,12 +47,12 @@ $width1400: 1400px;
     line-height: 85%;
     /* 83.3px */
     text-transform: uppercase;
-   
+
 
 }
 
 .title__list {
-   
+
     margin-left: 242px;
 
 }
@@ -65,14 +65,14 @@ ul li a {
 }
 
 .title__list2 {
-  
+
     font-size: 12px;
     margin-left: 131px;
 
 }
 
 .summa {
-  
+
     font-size: 12px;
     margin-left: 123px;
 
@@ -83,32 +83,32 @@ ul li a {
 }
 
 
- // here starts second block EXPERTS IN HIGHLAND DRESS
+// here starts second block EXPERTS IN HIGHLAND DRESS
 
 
-.expertsindress {
-    
-}
+.expertsindress {}
 
 .container {
     width: $width1400;
     margin: 0 auto;
-   
-   
+
+
 }
 
 .expertsindress__row {
-     border: 1px solid #6F6F6F;
+    border: 1px solid #6F6F6F;
     // padding: 10px 11px 10px 11px;
-     display: flex;
+    display: flex;
 
-    }
+}
+
 .img {
-width: 932px;
+    width: 932px;
     height: 620px;
     border-right: 1px solid #6F6F6F;
     // padding: 10px 11px 10px 11px;
 }
+
 .img__img {
     width: 912px;
     height: 600px;
@@ -118,7 +118,7 @@ width: 932px;
 
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
 }
@@ -133,45 +133,51 @@ width: 932px;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    
+
 }
+
 .p {
-        font-size: 16px;
-        text-transform: none;
-        width: 440px;
-    }
+    font-size: 16px;
+    text-transform: none;
+    width: 440px;
+}
+
 .dekoration {
     height: 310px;
-   width: 467px;
-     background: url(..//img/Line\ 10.png) 0 0 no-repeat, url(..//img/Line\ 3.png) no-repeat, url(..//img/Line\ 4.png) right no-repeat, url(..//img/Line\ 9.png) center no-repeat;
+    width: 467px;
+    background: url(..//img/Line\ 10.png) 0 0 no-repeat, url(..//img/Line\ 3.png) no-repeat, url(..//img/Line\ 4.png) right no-repeat, url(..//img/Line\ 9.png) center no-repeat;
 }
 
 // next block block_future for future desing
 
-.block_future{
+.block_future {
     width: $width1400;
     height: 120px;
     margin-left: 20px;
 }
 
-.footer { }
-.container{
+.footer {}
+
+.container {
     width: 1440px;
     background-color: #DEDEDE;
 }
+
 .footerForm {
     width: 1400px;
     height: 103px;
     margin: 0 auto;
     background-color: #DEDEDE;
-  }
-  .footerForm .blockHi {
+}
+
+.footerForm .blockHi {
     display: flex;
     width: 1399px;
     height: 52px;
     border: 1px solid #6f6f6f;
-  }
-  .footerForm .blockHi .singUp {
+}
+
+.footerForm .blockHi .singUp {
     width: 463px;
     height: 52px;
     padding: 16px 9px 10px 10px;
@@ -181,10 +187,12 @@ width: 932px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 110%; /* 22px */
+    line-height: 110%;
+    /* 22px */
     text-transform: uppercase;
-  }
-  .footerForm .blockHi .email {
+}
+
+.footerForm .blockHi .email {
     width: 468px;
     height: 51px;
     border: 1px solid #6f6f6f;
@@ -196,11 +204,13 @@ width: 932px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 19.2px */
+    line-height: 120%;
+    /* 19.2px */
     text-transform: uppercase;
     background: #dedede;
-  }
-  .footerForm .blockHi .buttonSubscribe {
+}
+
+.footerForm .blockHi .buttonSubscribe {
     padding: 16px 180px 15px 179px;
     width: 467px;
     height: 51px;
@@ -211,21 +221,25 @@ width: 932px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 110%; /* 22px */
+    line-height: 110%;
+    /* 22px */
     text-transform: uppercase;
     opacity: 0.7;
     background: var(--Grey, #6f6f6f);
-  }
-  .footerForm .blockLO {
+}
+
+.footerForm .blockLO {
     display: flex;
     width: 1400px;
     height: 51px;
-  }
-  .footerForm .blockLO .nonBlock {
+}
+
+.footerForm .blockLO .nonBlock {
     width: 464px;
     height: 50px;
-  }
-  .footerForm .blockLO .resultInfo {
+}
+
+.footerForm .blockLO .resultInfo {
     padding-top: 16px;
     padding-left: 10px;
     border: 1px solid #6f6f6f;
@@ -238,6 +252,141 @@ width: 932px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 19.2px */
+    line-height: 120%;
+    /* 19.2px */
     opacity: 0.5;
-  }
+}
+
+
+/*HIGHLAND WEAR*/
+
+.highlandwearblock_container {
+    width: 1400px;
+    height: 821px;
+    margin: 0 auto;
+    border: 1px solid #6F6F6F;
+
+}
+
+.highlandwearblock_title {
+    width: 1400px;
+    height: 81px;
+    font-size: 48px;
+    border-bottom: 1px solid #6F6F6F;
+    padding-left: 11px;
+    padding-top: 20px;
+
+    background: url(..//img/Union.png) 1305px 23px no-repeat;
+}
+
+
+.highlandwearblock_toprow {
+    display: flex;
+}
+
+.block {
+    width: 232px;
+    height: 356px;
+    border: 1px solid #6F6F6F;
+
+}
+
+.imgallforblock {
+    width: 213px;
+    height: 300px;
+    margin: 10px 9px 10px 9px;
+}
+
+.img1 {
+    background: url(..//img/Rectangle\ 58.png) center no-repeat;
+}
+
+.button_block {
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 232px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 3px;
+
+}
+
+.button_block1 {
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.img2 {}
+
+.img3 {}
+
+.img4 {
+    background: url(..//img/Rectangle\ 58_2.png) center no-repeat;
+}
+
+.button_block4 {
+
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.img5 {}
+
+.img6 {
+    background: url(..//img/Rectangle\ 58_3.png) center no-repeat;
+}
+
+.button_block6 {
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.highlandwearblock_buttomrow {
+    display: flex;
+}
+
+.block7 {}
+
+.img7 {}
+
+.block8 {}
+
+.img8 {
+    background: url(..//img/Rectangle\ 58_8.png) center no-repeat;
+}
+
+.button_block8 {
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.block9 {
+    
+}
+
+.img9 {
+    background: url(..//img/Rectangle\ 58_9.png) center no-repeat;}
+
+.button_block9 {
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 193px 13px no-repeat;
+}
+
+.block10 {}
+
+.img10 {}
+
+.block11 {}
+
+.img11 {
+    background: url(..//img/Rectangle\ 58_11.png) center no-repeat;
+}
+
+.button_block11 {
+    border-top: 1px solid #6F6F6F;
+    background: url(..//img/Arrow.png) 190px 13px no-repeat;
+}
+
+.block12 {}
+
+.img12 {}

@@ -5,14 +5,12 @@ $width1400: 1400px;
 
 .wrapper {
     min-height: 100%;
-    // overflow: hidden;
-
     display: flex;
     flex-direction: column;
 }
 
 .content {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     flex: 1 1 auto;
     font-family: Space Grotesk;
@@ -21,20 +19,22 @@ $width1400: 1400px;
     flex: 1 1 auto; // должно помочь с прибивание футера
 }
 
+@media (max-width: 1200px) {
+    .content {
+        min-width: 970px;
+    }
+}
+
 .title {
     padding: 10px 20px 10px 20px;
-
 }
 
 .container {
     max-width: $width1400;
-
 }
 
 .row {
     display: flex;
-    // justify-content: space-between;
-
 }
 
 .title__title {
@@ -83,7 +83,7 @@ ul li a {
 }
 
 
-// here starts second block EXPERTS IN HIGHLAND DRESS
+/*----------------------- here starts second block EXPERTS IN HIGHLAND DRESS----------------------------------*/
 
 
 .expertsindress {}
@@ -91,15 +91,11 @@ ul li a {
 .container {
     width: $width1400;
     margin: 0 auto;
-
-
 }
 
 .expertsindress__row {
     border: 1px solid #6F6F6F;
-    // padding: 10px 11px 10px 11px;
     display: flex;
-
 }
 
 .img {
@@ -125,15 +121,12 @@ ul li a {
 
 .expertsindress__title {
     font-size: 48px;
-    // width: 447px;
-    // height: 81px;
-    // border: 1px solid #6F6F6F;
     margin-left: 10px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-
+    // помогло прибить футер. добавление в среднем блоке, разрешить ему увеличиваться
 }
 
 .p {
@@ -148,7 +141,7 @@ ul li a {
     background: url(..//img/Line\ 10.png) 0 0 no-repeat, url(..//img/Line\ 3.png) no-repeat, url(..//img/Line\ 4.png) right no-repeat, url(..//img/Line\ 9.png) center no-repeat;
 }
 
-// next block block_future for future desing
+/*------------------ next block block_future for future desing --------------------------*/
 
 .block_future {
     width: $width1400;
@@ -258,7 +251,7 @@ ul li a {
 }
 
 
-/*HIGHLAND WEAR*/
+/*-------------------------HIGHLAND WEAR-----------------------------------*/
 
 .highlandwearblock_container {
     width: 1400px;
@@ -360,12 +353,11 @@ ul li a {
     background: url(..//img/Arrow.png) 190px 13px no-repeat;
 }
 
-.block9 {
-    
-}
+.block9 {}
 
 .img9 {
-    background: url(..//img/Rectangle\ 58_9.png) center no-repeat;}
+    background: url(..//img/Rectangle\ 58_9.png) center no-repeat;
+}
 
 .button_block9 {
     border-top: 1px solid #6F6F6F;

@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   flex: 1 1 auto;
   font-family: Space Grotesk;
@@ -89,6 +89,11 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1 1 auto;
 }
 
+@media (max-width: 1200px) {
+  .content {
+    min-width: 970px;
+  }
+}
 .title {
   padding: 10px 20px 10px 20px;
 }
@@ -136,6 +141,7 @@ ul li a {
   font-size: 12px;
 }
 
+/*----------------------- here starts second block EXPERTS IN HIGHLAND DRESS----------------------------------*/
 .container {
   width: 1400px;
   margin: 0 auto;
@@ -185,6 +191,7 @@ ul li a {
   background: url(..//img/Line\ 10.png) 0 0 no-repeat, url(..//img/Line\ 3.png) no-repeat, url(..//img/Line\ 4.png) right no-repeat, url(..//img/Line\ 9.png) center no-repeat;
 }
 
+/*------------------ next block block_future for future desing --------------------------*/
 .block_future {
   width: 1400px;
   height: 120px;
@@ -290,7 +297,7 @@ ul li a {
   opacity: 0.5;
 }
 
-/*HIGHLAND WEAR*/
+/*-------------------------HIGHLAND WEAR-----------------------------------*/
 .highlandwearblock_container {
   width: 1400px;
   height: 821px;

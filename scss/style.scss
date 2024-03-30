@@ -3,30 +3,66 @@
 
 $width1400: 1400px;
 
+body {
+    background: #DEDEDE;
+}
+
 .wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+
 }
 
 .content {
     max-width: 1440px;
     margin: 0 auto;
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
     font-family: Space Grotesk;
     text-transform: uppercase;
     background-color: #DEDEDE;
-    flex: 1 1 auto; // должно помочь с прибивание футера
-}
-
-@media (max-width: 1200px) {
-    .content {
-        min-width: 970px;
-    }
+    // flex: 1 1 auto; // должно помочь с прибивание футера
 }
 
 .title {
     padding: 10px 20px 10px 20px;
+}
+
+@media (max-width:1440px) {
+    .container {
+        max-width: 1300px;
+
+        .title__title {
+            font-size: 60px;
+        }
+
+        .row .title__list2 {
+            font-size: 10px;
+        }
+
+        .summa {
+            font-size: 10px;
+        }
+
+        ul li a {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .container {
+        max-width: 800px;
+
+        .title__title {
+            font-size: 40px;
+        }
+
+        .row .title__list2 .summa ul li a {
+            font-size: 8px;
+        }
+    }
+
 }
 
 .container {
@@ -35,6 +71,8 @@ $width1400: 1400px;
 
 .row {
     display: flex;
+    justify-content: space-between;
+
 }
 
 .title__title {
@@ -51,10 +89,17 @@ $width1400: 1400px;
 
 }
 
+.row__list {
+    display: flex;
+    // flex-direction: column;
+    // align-items: ;
+    // justify-content: start;
+}
+
 .title__list {
 
-    margin-left: 242px;
-
+    // margin-left: 242px;
+    // justify-content: space-between;
 }
 
 ul li a {
@@ -378,7 +423,3 @@ ul li a {
     border-top: 1px solid #6F6F6F;
     background: url(..//img/Arrow.png) 190px 13px no-repeat;
 }
-
-.block12 {}
-
-.img12 {}

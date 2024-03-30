@@ -16,6 +16,14 @@ body {
 .container {
   width: 1170px;
   margin: 0 auto;
+  background: black;
+}
+@media (min-width:1170px) {
+.container {
+  background: red;
+}
+
+  
 }
 
 .header__row {

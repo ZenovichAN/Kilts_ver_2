@@ -1,42 +1,192 @@
-
+@import "_make null";
 body{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #1e2825;
 }
 .wrapper {
-    display: flex;
     min-height: 100%;
-    overflow: hidden;
-    flex-direction: column;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+    // минимальная высота шапки 100, ширина авто. остальной весь контент 1fr чтобы от прижимал footer к полу даже если контента будет мало, дальше идет footer minmax(70px, auto). далее / и устанавливаем размер колонок (колонка у нас одна и должна занимать все пространство 1fr)
+    // применим названия наших грид элементов чтобы было понятно что происходит
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"; // и теперь эти имена нужно присвоить самим грид элементам
+
+
 }
 
 .header {
-background-color: #5e5373;
+
+    grid-area: header; // присвоить имена самим грид элементам
+    padding: 15px;
+    background-color: #794f45;
+    align-items: center; //опустим меню на центр шапки
+    display: grid; // здесь же будем строить грид контейнер
+    //обьявим сетку
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr; //но отображение будет не правильным т.к. отображение с первой ячейки сейчас, а нужно со второй
 }
 
-.container {
-    width: 1170px;
-    margin: 0 auto;
-}
-
-.header__row {
-display: flex;
-justify-content: space-between;
-height: 80px;
-align-items: center;
-}
 .header__logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    grid-column: 2 / 3; //чтобы ячейки заполнялись со второй
 }
-.heared__menu {
+
+.haeder__menu {
+    grid-column: 3 / 4;
 }
-.menu {
+
+.header__list {
+    display: grid;
+    grid-auto-flow: column; //автоматическое заполнение используем. таким образом грид элементы выстроятся в ряд
+    justify-items: end; //чтобы содержимое грид элементов выстроилось по левому краю
 }
-.menu__icon {
+
+.header__list li {}
+
+.header__link {
+    color: #fff;
+    font-size: 18px;
 }
-.icon-menu {
+
+.header__burger {}
+
+.main {
+    grid-area: main;
+    padding: 30px 15px;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
 }
-.menu__body {
+
+.sidebar {
+    grid-column: 2 / 3;
+    background-color: #7a956b;
+    padding: 30px 15px;
 }
-.menu__list {
+
+.sidebar__menu {}
+
+.sidebar__list {}
+
+.sidebar__list li {
+    margin: 0px 0px 15px 0px;
 }
-.menu__link {
+
+
+.sidebar__link {
+    color: #fff;
+    font-size: 20px;
 }
+
+.content {
+    grid-column: 3 / 4;
+    padding: 0px 0px 0px 30px; //отделим сайдбар
+}
+
+.content__title {
+    font-size: 20px;
+}
+
+.content__gallery {
+    margin: 0px 0px 30px 0px; // отделяю галерею от товаров
+
+}
+
+.gallery {}
+
+.gallery__title {
+    font-size: 18px;
+    gap: 10px;
+}
+
+.gallery__items {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // чтобы ячейки строились в ряд и переходили на новую строку когда это нужно
+}
+
+.gallery__item {
+    position: relative;
+    padding: 0px 0px 85% 0px; // чтобы картинка пропорционально сжалась
+}
+
+.gallery__item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //правильно позиционируем картинку
+}
+
+.gallery__item_big {
+    //эти изображение хочу сделать больше и поэтому даю им по две ячейки
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.content__products {}
+
+.products {}
+
+.products__title {}
+
+.products__items {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.products__item {
+    display: grid;
+    grid-auto-flow: row; //выстрою рядами. картинка, название товара, кнопка
+    grid-template: auto 1fr minmax(40px, auto) / 1fr; // изображение-авто, название-занимает все доступное пространство, кнопка высотой минимальной-40, колонка одна на всю ширину 1fr
+}
+
+.products__image {
+    position: relative;
+    padding: 0px 0px 90% 0px; // чтобы картинка пропорционально сжалась
+    margin: 0px 0px 20px 0px;
+}
+
+.products__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //правильно позиционируем картинку
+}
+
+.products__name {
+    font-size: 24px;
+    color: #fff;
+    line-height: 30px;
+    margin: 0px 0px 20px 0px;
+}
+
+.products__button {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    line-height: 40px;
+    justify-self: start; //отменить растягивание на всю ширину
+    background-color: #77608d;
+    padding: 0px 20px;
+}
+
+.footer {
+    background-color: #77608d;
+}
+
+.footer__copy {}
+
+.footer__text {}

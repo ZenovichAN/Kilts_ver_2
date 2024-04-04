@@ -1,7 +1,9 @@
 @import "_make null";
-body{
+
+body {
     background-color: #1e2825;
 }
+
 .wrapper {
     min-height: 100%;
     display: grid;
@@ -45,7 +47,10 @@ body{
     justify-items: end; //чтобы содержимое грид элементов выстроилось по левому краю
 }
 
-.header__list li {}
+.header__list li {
+
+    margin: 0px 0px 0px 30px;
+}
 
 .header__link {
     color: #fff;
@@ -54,17 +59,61 @@ body{
 
 .header__burger {}
 
-.main {
-    grid-area: main;
-    padding: 30px 15px;
-    display: grid;
-    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+@media (max-width:992px) {
+
+    // для всех экранов менее 992px убирать меню
+    .header__list {
+        display: none; // скрыть список
+    }
+
+    .haeder__menu {
+        //поставить этот бургер в конец меню
+        display: grid;
+        justify-items: end;
+    }
+
+    .header__burger {
+        width: 30px;
+        display: grid;
+        align-items: center;
+        grid-template: repeat(3, 8px) / 1fr;
+    }
+
+    .header__burger::before {
+        //имитация бургера
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: #fff;
+    }
+
+    .header__burger::after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: #fff;
+    }
+
+    .header__burger span {
+        height: 2px;
+        width: 30px;
+        background-color: #fff;
+    }
 }
 
+.main {
+
+    padding: 30px 15px;
+
+}
+
+
+
 .sidebar {
-    grid-column: 2 / 3;
+
     background-color: #7a956b;
     padding: 30px 15px;
+    margin: 0px 0px 30px 0px;
 }
 
 .sidebar__menu {}
@@ -81,10 +130,7 @@ body{
     font-size: 20px;
 }
 
-.content {
-    grid-column: 3 / 4;
-    padding: 0px 0px 0px 30px; //отделим сайдбар
-}
+.content {}
 
 .content__title {
     font-size: 20px;
@@ -93,6 +139,28 @@ body{
 .content__gallery {
     margin: 0px 0px 30px 0px; // отделяю галерею от товаров
 
+}
+
+// по теме мобаилферст. устанавливать grid хреновины только на экранах больше 992 px
+//для этого перенесу настройки main в медиа, а на малых экранах оставлю только отступ
+
+@media (min-width: 992px) {
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    }
+
+    /*------------------------------перенес из-за очередности чтения кода . должно сработывать на экранах больше 992----------------*/
+    .sidebar {
+        grid-column: 2 / 3;
+        margin: 0px;
+    }
+
+    .content {
+        grid-column: 3 / 4;
+        padding: 0px 0px 0px 30px; //отделим сайдбар
+    }
 }
 
 .gallery {}
@@ -124,10 +192,20 @@ body{
     //правильно позиционируем картинку
 }
 
+@media (min-width: 767px) {
+
+    //т.к. при уменьшении, изображения занимающие большее количество ячеек, имеют отступ и колонка визуально хреновая
+    .gallery__item_big {
+        //эти изображение хочу сделать больше и поэтому даю им по две ячейки
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
 .gallery__item_big {
-    //эти изображение хочу сделать больше и поэтому даю им по две ячейки
-    grid-column: span 2;
-    grid-row: span 2;
+    // //эти изображение хочу сделать больше и поэтому даю им по две ячейки
+    // grid-column: span 2;
+    // grid-row: span 2;
 }
 
 .content__products {}
@@ -141,6 +219,7 @@ body{
     column-gap: 30px;
     row-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // grid-auto-rows: 1fr; // чтобы строки подстраивались друг под друга и заполняли все пространство. если один товар будет с большим описанием, то все колонки будут одной высоты. флексом такого не сделать
 }
 
 .products__item {
@@ -185,8 +264,44 @@ body{
 
 .footer {
     background-color: #77608d;
+    display: grid;
+    grid-area: footer;
+    padding: 15px;
+    align-items: center; // выставил по ввертикальному центру
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr; // настройка как у header
+
 }
 
 .footer__copy {}
 
 .footer__text {}
+
+@media (min-width: 550px) {
+
+    // при ширене экрана более 550 . на меньшей ширене это не нужно
+    .footer__copy {
+        grid-column: 2 / 3; // двигаем ячейки
+    }
+
+    .footer__text {
+        text-align: right;
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 550px) {
+
+    // на ширене менее 550 будем изменять структуру сетки
+    .footer {
+        // теперь будет два ряда и одна колонка
+        grid-template: 1fr 1fr / 1fr;
+        text-align: center;
+    }
+    .footer__copy{
+        order: 2;
+    }
+
+    .footer__text{
+        order: 1; // поставлю текст выше
+    }
+}
